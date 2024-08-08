@@ -14,13 +14,8 @@
  *    limitations under the License.
  */
 
+/**
+ * Lists the classes related to the content of an
+ * inventory, and the ways to edit this content.
+ */
 package fr.minuskube.inv.content;
-
-import org.bukkit.entity.Player;
-
-public interface InventoryProvider {
-
-    void init(Player player, InventoryContents contents);
-    default void update(Player player, InventoryContents contents) {}
-
-}

@@ -14,13 +14,8 @@
  *    limitations under the License.
  */
 
-package fr.minuskube.inv.content;
-
-import org.bukkit.entity.Player;
-
-public interface InventoryProvider {
-
-    void init(Player player, InventoryContents contents);
-    default void update(Player player, InventoryContents contents) {}
-
-}
+/**
+ * Lists the classes related to the opening of an
+ * inventory, {@link fr.minuskube.inv.opener.InventoryOpener}.
+ */
+package fr.minuskube.inv.opener;
