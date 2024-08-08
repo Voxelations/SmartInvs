@@ -123,8 +123,10 @@ public class InventoryManager {
     
     protected void scheduleUpdateTask(Player p, SmartInventory inv) {
     	PlayerInvTask task = new PlayerInvTask(p, inv.getProvider(), contents.get(p));
-    	task.runTaskTimer(plugin, 1, inv.getUpdateFrequency());
-    	this.updateTasks.put(p, task);
+        if (inv.getUpdateFrequency() > 0) {
+            task.runTaskTimer(plugin, 1, inv.getUpdateFrequency());
+            this.updateTasks.put(p, task);
+        }
     }
     
     protected void cancelUpdateTask(Player p) {
